@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+<body class="home">
+
+    <div class="container">
+        <h1>JSON CV</h1>
+        <hr width="50%">
+        <p class="thinFont">Easy Application.</p>
+
+        <div class="col-md-12">
+            <h4>This site is populated by the resume information stored on <em>MongoDB</em> using <em>Node.js, EJS</em> and a variety of <em>npm</em> modules - all launched on a <em>Heroku</em> server. Check in periodically for more templates and updates to my resume!</h4>
+        </div>
+
+        <br>
+
+        <div class="col-md-12">
+            <a href="/classic" class="blackLink"><div class="tempBox">
+                <p class="classicFont middle">Classic</p>
+            </div></a>
+            
+            <a href="/personal" class="blackLink"><div class="tempBox">
+                <p class="thinFont middle">Personal</p>
+            </div></a>
+
+            <a href="/resumes" class="blackLink"><div class="tempBox">
+                <p class="jsonFont middle">{ JSON }</p>
+            </div></a>
+
+        </div>
+
+        <br>
+
+        <div class="col-md-12">
+            <p class="thinFont">Drawing on a theory found on <a href="https://jsonresume.org/">JSONresume.org</a>, I wanted to standardize the way resumes are created, displayed and shared with employers. My ultimate goal is to create a standardized JSON Resume file that users can fill out and store on the <em>Resume API</em>. This will allow the user to populate any template made using the standardized documentation in no time at all. Theoretically, if employers also started using a standardized application system, applying to a postition would simply be a one-click process.</p>
+        </div>
+        
+    </div>
+
+
+
+
+</body>
+<%- include('partials/footer') %>

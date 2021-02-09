@@ -1,0 +1,100 @@
+<%- include('partials/header') %>
+
+<body class="personal">
+
+<div class="row">
+    
+    <div class="col-md-3 sidebar-top text-center">
+        <img src="<%= resume.basics.picture %>" alt="<%= resume.basics.name %> Profile Picture" class="headshotPersonal noBottom">
+    
+        <h4 class="text-center padTop fader">CONTACT</h4>
+        <hr width="50%" color="white" class="noTop fader">
+        
+        <a href="mailto:<%= resume.basics.email %>"><img src="assets/emailIcon.png" alt="Email Icon" class="social-personal fader padBottom"></a>
+        <h6 class="thinFont noTop noBottom">E-mail</h6>
+        <p class="thinFont noTop"><%= resume.basics.email %></p>
+
+        <a href="tel:<%= resume.basics.phone %>"><img src="assets/phoneIcon.png" alt="Phone Icon" class="social-personal fader padBottom"></a>
+        <h6 class="thinFont noTop noBottom">Phone</h6>
+        <p class="thinFont noTop"><%= resume.basics.phone %></p>
+        
+        <a href="<%= resume.basics.website %>" target="_target"><img src="assets/wwwIcon.png" alt="Phone Icon" class="social-personal fader padBottom"></a>
+        <h6 class="thinFont noTop noBottom">Website</h6>
+        <p class="thinFont noTop"><%= (resume.basics.website).replace(/^https?:\/\//,'') %></p>
+    
+    </div>
+    <div class="col-md-9 text-center padBottom">
+        <h1 id="name" class="noBottom"><%= resume.basics.name %></h1>
+        <h5 class="thinFont padBottom largeMarg"><%= resume.basics.label[0].software %></h5>
+        
+        <div class="boxed padBottom largeMarg"><%= resume.basics.summary[0].tech %></div>
+        <h6 class="padTop noBottom thinFont">Recent Experience</h6>
+        <div class="boxed noTop largeMarg">
+            <h5 class="noBottom"><%= resume.continueded[0].institution %></h5>
+            <h6 class="noTop"><%= resume.continueded[0].course %></h6>
+            <p class="thinFont"><%= resume.continueded[0].description %></p>
+        </div> 
+        <div class="boxed">
+            <% resume.highlevel.forEach(function(x) { %>
+
+                <p class="skills noBorder thinFont">&#8226; <%= x.name %></p>
+                
+            <% }) %>
+
+            <% resume.skills.forEach(function(x) { %>
+
+                <p class="skills noBorder thinFont">&#8226; <%= x.name %></p>
+            
+            <% }) %>
+        </div>
+        
+
+    </div>
+
+
+
+    <div class="col-md-3 sidebar text-center">
+        <h4 class="text-center padTop fader">SOCIAL</h4>
+        <hr width="50%" color="white" class="noTop fader">
+        <% resume.basics.profiles.forEach(function(x) { %>
+        <div class="padTop">
+                <a href="<%= x.url %>" target="_blank"><img src="assets/<%= x.network %>.png" alt="<%= x.network %> Icon" class="social-icon fader"></a>
+                <h6 class="fader padTop noBottom"><%= x.network %></h6>
+                <p class="thinFont noTop">@<%= x.username %></p>
+        </div>
+        <% }) %>
+    </div>
+    <div class="col-md-9 text-center">
+        <h3 class="text-center fader">Work</h3>
+
+        <div class="boxed largeMarg">
+            <% resume.work.forEach(function(x) { %>
+
+                <h4 class="noBottom"><%= x.company %></h4>
+                
+                <% x.position.forEach(function(x) { %>
+
+                    <p class="noTop noBottom thinFont vSmall"><%= x %></p>
+
+                <% }) %>
+
+                <h6 class="thinFont padTop"><%= x.summary %></h6>
+
+            <% }) %>
+                
+
+        </div>
+        
+    </div>
+    
+    
+</div>
+    
+
+
+
+    
+</body>
+
+
+<%- include('partials/footer') %>

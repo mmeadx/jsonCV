@@ -1,0 +1,188 @@
+/* Theme Global*/
+.home {
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.classic {
+    text-align: center;
+    background-color: #fcfcfc;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.personal {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+/* Classic Theme */
+
+.greyBox {
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.title {
+    display: absolute;
+    bottom: 100px;
+    right: 100px;
+}
+
+.skills {
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 1px 1px 1px 1px;
+}
+
+.social-classic {
+    width: 4%;
+}
+
+/* Personal Theme */
+
+#name {
+    padding-top: 20px;
+    animation: fadein 2s;
+}
+.sidebar-top {
+    background-color: #302f2f;
+    color: white;
+    /* animation: fadein 2s; */
+}
+
+.fader {
+    animation: fadein 2s;
+}
+.sidebar {
+    background-color: #302f2f;
+    color: white;
+}
+
+.thinFont {
+    font-family: 'Montserrat', sans-serif;
+    animation: fadein 2s;
+}
+
+.boxed {
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #302f2f;
+    border-width: 1px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    animation: fadein 2s;
+}
+
+.skills-dark {
+    background-color: #302f2f;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headshotPersonal {
+    border-radius: 50%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 80%;
+    animation: fadein 2s;
+
+}
+
+.social-personal {
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.social-icon {
+    width: 12%;
+    display: inline-block;
+    /* margin-left: -10%; */
+}
+
+.noBorder {
+    border-style: none;
+}
+
+.position {
+    display: inline-block;
+}
+
+/* General Tags */
+
+.noTop {
+    margin-top: 0;
+}
+
+.noBottom {
+    margin-bottom: 0;
+}
+
+.padBottom {
+    padding-bottom: 10px;
+}
+
+.largeMarg {
+    margin-bottom: 2%;
+}
+
+.padTop {
+    padding-top: 10px;
+}
+
+.putLeft {
+    text-align: left;
+    margin-left: 7%;
+}
+
+.vSmall {
+    font-size: smaller;
+}
+
+/* JSON CV */
+
+.tempBox {
+    border-style: solid;
+    border-color: #302f2f;
+    border-width: 2px;
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    animation: fadein 3s;
+    margin: 10px;
+}
+
+.middle {
+    padding-top: 35px;
+}
+
+a.blackLink {
+    color: black;
+}
+
+.tempBox:hover {
+    background-color: black;
+    color:white;
+}
+
+.jsonFont {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.classicFont {
+    font-family: 'Lexend Mega', sans-serif;
+}
+/* Animations */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+

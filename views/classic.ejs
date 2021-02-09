@@ -1,0 +1,86 @@
+<%- include('partials/header') %>
+
+<body class="classic">
+    <hr width="50%">
+    <hr width="40%">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 greyBox">
+                <h1 class="noBottom"><%= resume.basics.name %></h1>
+                <p class="noTop noBottom"><%= resume.basics.label[0].data %></p>
+                <p class="noTop noBottom vSmall"><%= resume.basics.email %> | <%= resume.basics.phone %></p>
+                <p class="noTop noBottom padBottom vSmall"><a href="<%= resume.basics.website %>" target="_blank">www.mattmeadmpls.com</a></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 padTop">
+                <% resume.basics.profiles.forEach(function(x) { %>
+                    <a href="<%= x.url %>" target="_blank"><img src="assets/<%= x.network %>-dark.png" alt="<% x.network %> Icon" class="social-classic"></a>
+                <% }) %>
+                
+            </div>
+        </div>
+
+        <hr width="30%">
+
+        <div class="row">
+            <div class="col-md-12">
+                <p><%= resume.basics.summary[0].tech %></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="greyBox">Education</h2>
+                <% resume.education.forEach(function(x) { %>
+                
+                <h6 class="noBottom"><%= x.institution %></h6>
+                <p class="noTop"><%= x.area %></p>
+                
+                <% }) %>
+            </div>
+        </div>
+
+        <hr width="30%" class="noTop">
+
+        <div class="row">
+            <div class="col-md-6 padBottom">
+                <h3 class="greyBox">High Level</h3>
+                <% resume.highlevel.forEach(function(x) { %>
+                    <h6><%= x.name %></h6>
+                <% }) %>
+            </div>
+            <div class="col-md-6 padBottom">
+                <h3 class="greyBox">Skills</h3>
+                <% resume.skills.forEach(function(x) { %>
+                
+                <% if (x.type === "tech" || x.type === "blend" || x.type === "soft") { %>
+                    <p class="skills"><%= x.name %></p>
+                <% } %>
+                <% }) %>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="greyBox">Work</h2>
+                <% resume.work.forEach(function(x) { %>
+                
+                <h5 class="noBottom"><%= x.company %></h5>
+                    <% x.position.forEach(function(x) { %>
+                        <p class="vSmall noBottom"><%= x %></p>
+                    <% }) %>
+                <p class="noTop"><%= x.summary %></p>
+                <hr width="15%" class="noTop">
+                <% }) %>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+
+
+<%- include('partials/footer') %>
